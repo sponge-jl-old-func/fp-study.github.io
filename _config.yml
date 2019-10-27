@@ -1,0 +1,24 @@
+title:              FP-STUDY
+email:              fp-study@gmail.com
+description:        Functional Programming Study with Haskell
+author:             devJRL
+baseurl:            
+url:                "https://fp-study.github.io"
+
+# Social Profiles
+twitter_username:   
+github_username:    fp-study
+facebook_username:  
+linkedin_username:  devJRL
+
+# Add your google-analytics ID here to activate google analytics
+google_analytics:    # out your google-analytics code
+
+# Build settings
+markdown:           kramdown
+paginate:           5
+paginate_path:      "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
