@@ -1,6 +1,6 @@
 title:              FP-STUDY
 email:              fp-study@gmail.com
-description:        Functional Programming Study with Haskell
+description:        Functional Programming Study on Haskell
 author:             devJRL
 baseurl:            
 url:                "https://fp-study.github.io"
@@ -22,4 +22,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
