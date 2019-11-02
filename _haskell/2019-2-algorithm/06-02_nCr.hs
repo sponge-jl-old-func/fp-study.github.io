@@ -37,21 +37,26 @@
      | length lists <  m  = [[   ]]
      | length lists == m  = [lists]
      | m == 1             = [[x] | x <- lists ]
-     | otherwise          = fix'head l ls (m-1) ++ exec'combi ls m
+     | otherwise          = fix'head l ls (m-1) -- 헤드를 반드시 포함하는 조합 작성
+                            ++ exec'combi ls m  -- 재귀호출
 
- -- | 헤드를 반드시 포함하는 조합을 찾는 함수//  head ++ [n-1개를 뽑아서 만든 조합]
+ -- | head를 반드시 포함하는 조합 작성 함수
+ -- | head : [n-1개를 뽑아서 만든 조합]
  fix'head :: Int -> [Int] -> Int -> [[Int]]
  fix'head fix tails@(t:ts) count
      | length tails <= count  = [ [fix] ++ tails ]
-     | otherwise              = [ fix : x | x <- picked ] ++ fix'head fix ts count
-     where picked = pick'tails tails count
+     | count == 1             = [ fix :[x]| x <- tails ] -- 헤드 외에 1개만 뽑을 때 재귀없이 간단작성
+     | otherwise              = [ fix : x | x <- set ]   -- 헤드와 조합을 매칭
+                                ++ fix'head fix ts count -- 재귀호출
+     where
+        set = pick'tails tails count -- n-1 개를 선택하여 작성된 조합
 
- -- | n-1개에 대한 조합을 생성하는 함수
+ -- | n-1개를 선택하여 조합 작성
  pick'tails :: [Int] -> Int -> [[Int]]
- pick'tails scope count
-     | length scope == count  = [scope]
-     | otherwise              = [picked ++ [select] | select <- option]
+ pick'tails scope count                 -- n-1 개를 입력으로 받음
+     | length scope == count  = [scope] -- 길이와 개수가 같으면 그대로 반환
+     | otherwise              = [picked ++ [select] | select <- option] -- 고정과 선택 조합
      where
          point  = count-1
-         picked = take point scope
-         option = drop point scope
+         picked = take point scope -- 지점까지 고정할 부분
+         option = drop point scope -- 지점이후 선택할 부분
