@@ -1,5 +1,6 @@
-# Created by https://www.gitignore.io/api/r,go,vim,node,ruby,rust,java,vuejs,react,linux,macos,redis,django,windows,eclipse,java-web,reactnative,visualstudio
-# Edit at https://www.gitignore.io/?templates=r,go,vim,node,ruby,rust,java,vuejs,react,linux,macos,redis,django,windows,eclipse,java-web,reactnative,visualstudio
+
+# Created by https://www.gitignore.io/api/r,go,vim,node,ruby,rust,java,vuejs,react,linux,macos,redis,django,windows,eclipse,java-web,reactnative,visualstudio,haskell
+# Edit at https://www.gitignore.io/?templates=r,go,vim,node,ruby,rust,java,vuejs,react,linux,macos,redis,django,windows,eclipse,java-web,reactnative,visualstudio,haskell
 
 ### Django ###
 *.log
@@ -205,6 +206,30 @@ local.properties
 ### Go Patch ###
 /vendor/
 /Godeps/
+
+### Haskell ###
+dist
+dist-*
+cabal-dev
+*.o
+*.hi
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+*.eventlog
+.stack-work/
+cabal.project.local
+cabal.project.local~
+.HTF/
+.ghc.environment.*
 
 ### Java ###
 # Compiled class file
@@ -429,6 +454,21 @@ sketch
 .expo
 __generated__
 
+### ReactNative.Gradle Stack ###
+.gradle
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
 ### ReactNative.Node Stack ###
 # Logs
 
@@ -483,41 +523,6 @@ __generated__
 # FuseBox cache
 
 # DynamoDB Local files
-
-### ReactNative.Buck Stack ###
-buck-out/
-.buckconfig.local
-.buckd/
-.buckversion
-.fakebuckversion
-
-### ReactNative.Gradle Stack ###
-.gradle
-
-# Ignore Gradle GUI config
-gradle-app.setting
-
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Cache of project
-.gradletasknamecache
-
-# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
-# gradle/wrapper/gradle-wrapper.properties
-
-### ReactNative.macOS Stack ###
-# General
-
-# Icon must end with two \r
-Icon
-
-
-# Thumbnails
-
-# Files that might appear in the root of a volume
-
-# Directories potentially created on remote AFP share
 
 ### ReactNative.Android Stack ###
 # Built application files
@@ -598,6 +603,36 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 
+### ReactNative.Buck Stack ###
+buck-out/
+.buckconfig.local
+.buckd/
+.buckversion
+.fakebuckversion
+
+### ReactNative.Linux Stack ###
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+
+# KDE directory preferences
+
+# Linux trash folder which might appear on any partition or disk
+
+# .nfs files are created when an open file is removed but is still being accessed
+
+### ReactNative.macOS Stack ###
+# General
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+
+# Files that might appear in the root of a volume
+
+# Directories potentially created on remote AFP share
+
 ### ReactNative.Xcode Stack ###
 # Xcode
 #
@@ -628,16 +663,6 @@ DerivedData/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
-
-### ReactNative.Linux Stack ###
-
-# temporary files which can be created if a process still has a handle open of a deleted file
-
-# KDE directory preferences
-
-# Linux trash folder which might appear on any partition or disk
-
-# .nfs files are created when an open file is removed but is still being accessed
 
 ### Redis ###
 # Ignore redis binary dump (dump.rdb) files
@@ -1104,4 +1129,4 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-# End of https://www.gitignore.io/api/r,go,vim,node,ruby,rust,java,vuejs,react,linux,macos,redis,django,windows,eclipse,java-web,reactnative,visualstudio
+# End of https://www.gitignore.io/api/r,go,vim,node,ruby,rust,java,vuejs,react,linux,macos,redis,django,windows,eclipse,java-web,reactnative,visualstudio,haskell
