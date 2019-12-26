@@ -50,7 +50,7 @@ main :: IO()
 main = do 
     print $ countPairings input
     where
-        input = [False, False, False, False]
+        input = [False, False, False, False, False, False]
 
 countPairings :: [Bool] -> Maybe Int
 countPairings taken = do
@@ -62,7 +62,7 @@ countPairings taken = do
     Nothing -> return 1
     -- | (재귀수행) 짝이 맺어지지 않은 친구(A)에 대하여
     otherwise -> do
-      firstFree' <- firstFree -- | Int <- Maybe Int 타입전환
+      firstFree' <- firstFree -- | unwrapping : Int <- Maybe Int
       -- | 그 다음 친구(B)부터 마지막 친구(n)까지 짝을 맺을 수 있는지 탐색(lambda do 구문)
       -- | 위 설명을 반복한 결과는 리스트에 담기고, 이 결과 리스트를 sum으로 매핑해서 모두 합산
       fmap sum $ forM [(firstFree'+1)..n] $ \pairWith -> do
