@@ -70,12 +70,12 @@ code.highlighter-rouge {
  .err{ /* Error */ color:$base08}
  .k{ /* Keyword */ color:$base0e}
  .l{ /* Literal */ color:$base09}
- .n{ /* Name */ color:$base05}
- .o{ /* Operator */ color:$base0c}
+ .n{ /* Name */ color:$base06}
+ .o{ /* Operator */ color:$base09}
  .p{ /* Punctuation */ color:$base05}
  .cm{ /* Comment.Multiline */ color:$base04}
  .cp{ /* Comment.Preproc */ color:$base04}
- .c1{ /* Comment.Single */ color:$base04}
+ .c1{ /* Comment.Single */ color:$base03; font-weight:bold}
  .cs{ /* Comment.Special */ color:$base04}
  .gd{ /* Generic.Deleted */ color:$base08}
  .ge{ /* Generic.Emph */ font-style:italic}
@@ -111,7 +111,7 @@ code.highlighter-rouge {
  .w{ /* Text.Whitespace */ color:$base05}
  .mf{ /* Literal.Number.Float */ color:$base09}
  .mh{ /* Literal.Number.Hex */ color:$base09}
- .mi{ /* Literal.Number.Integer */ color:$base09}
+ .mi{ /* Literal.Number.Integer */ color:$base0d; font-weight: bold}
  .mo{ /* Literal.Number.Oct */ color:$base09}
  .sb{ /* Literal.String.Backtick */ color:$base0b}
  .sc{ /* Literal.String.Char */ color:$base05}

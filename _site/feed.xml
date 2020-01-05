@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-01-05T20:54:41+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">FP-Study</title><subtitle>Functional Programming Study Group</subtitle><entry><title type="html">Hello, Haskell!</title><link href="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html" rel="alternate" type="text/html" title="Hello, Haskell!" /><published>2019-10-26T00:00:00+09:00</published><updated>2019-10-26T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2019/10/26/Hello-Haskell</id><content type="html" xml:base="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html">&lt;p&gt;On today, We discussed writting down various method of haskell algorithm about many questions.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-01-05T23:02:05+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">FP-Study</title><subtitle>Functional Programming Study Group</subtitle><entry><title type="html">JMB-06-04 Boogle Game</title><link href="http://0.0.0.0:4000/2020/01/04/JMB-06-04.html" rel="alternate" type="text/html" title="JMB-06-04 Boogle Game" /><published>2020-01-04T00:00:00+09:00</published><updated>2020-01-04T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2020/01/04/JMB-06-04</id><content type="html" xml:base="http://0.0.0.0:4000/2020/01/04/JMB-06-04.html">&lt;p&gt;&lt;strong&gt;Ch.06&lt;/strong&gt; Brute force :: &lt;strong&gt;BOGGLE GAME&lt;/strong&gt; &lt;!--more--&gt; &lt;a href=&quot;https://algospot.com/judge/problem/read/BOGGLE&quot;&gt;(click for detail)&lt;/a&gt;
+&lt;!--more--&gt; « &lt;a href=&quot;https://book.algospot.com/&quot;&gt;Algorithm Problem Solving Strategies&lt;/a&gt; book#1&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;solved&quot;&gt;Solved&lt;/h3&gt;
+
+&lt;p&gt;comment&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;comming&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soon&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/fp-study/fp-study.github.io/blob/master/_haskell/2020-1-JongManBook/06-brute-force/&quot;&gt;Click to view haskell code&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><category term="solved" /><category term="ch06" /><summary type="html">Ch.06 Brute force :: BOGGLE GAME</summary></entry><entry><title type="html">JMB-06-01 sum [1..n]</title><link href="http://0.0.0.0:4000/2019/12/26/JMB-06-01.html" rel="alternate" type="text/html" title="JMB-06-01 sum [1..n]" /><published>2019-12-26T00:00:00+09:00</published><updated>2019-12-26T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2019/12/26/JMB-06-01</id><content type="html" xml:base="http://0.0.0.0:4000/2019/12/26/JMB-06-01.html">&lt;p&gt;&lt;strong&gt;Ch.06&lt;/strong&gt; Brute force :: &lt;strong&gt;Sum from 1 to n&lt;/strong&gt;
+&lt;!--more--&gt; « &lt;a href=&quot;https://book.algospot.com/&quot;&gt;Algorithm Problem Solving Strategies&lt;/a&gt; book#1&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;solved&quot;&gt;Solved&lt;/h3&gt;
+
+&lt;p&gt;It’s so simple trick. Devide a part of plus previous summary, then call recursively.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;otherwise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;-- if, n = 10&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;outputInt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; 
+  &lt;span class=&quot;n&quot;&gt;putStrLn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;show&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputInt&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/fp-study/fp-study.github.io/blob/master/_haskell/2020-1-JongManBook/06-brute-force/06-01-sum-from-1-to-n_SOLVED.hs&quot;&gt;Click to view haskell code&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><category term="solved" /><category term="ch06" /><summary type="html">Ch.06 Brute force :: Sum from 1 to n</summary></entry><entry><title type="html">Hello, Haskell!</title><link href="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html" rel="alternate" type="text/html" title="Hello, Haskell!" /><published>2019-10-26T00:00:00+09:00</published><updated>2019-10-26T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2019/10/26/Hello-Haskell</id><content type="html" xml:base="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html">&lt;p&gt;On today, We discussed writting down various method of haskell algorithm about many questions.&lt;/p&gt;
 
 &lt;!--more--&gt;
 &lt;p&gt;Thanks for ‘&lt;a href=&quot;http://theyearlyprophet.com/&quot;&gt;Jongman Goo&lt;/a&gt;’ allowing to use question resources from &lt;a href=&quot;https://book.algospot.com/&quot;&gt;Algorithm Programming&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Notice" /><summary type="html">On today, We discussed writting down various method of haskell algorithm about many questions.</summary></entry></feed>
