@@ -1,193 +1,297 @@
 <!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<html>
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
 
-<head>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Canonical -->
+    <link rel="canonical" href="http://0.0.0.0:4000/">
 
-  <title>
-    FP-STUDY
-  </title>
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="FP-Study" href="http://0.0.0.0:4000/feed.xml"/>
+    
+    
 
-  <meta name="description" content="Functional Programming Study on Haskell">
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
 
-  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Google Analytics -->
+     <!-- End Google Analytics -->
 
-  <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>FP-Study | Functional Programming Study Group</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="FP-Study" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Functional Programming Study Group" />
+<meta property="og:description" content="Functional Programming Study Group" />
+<link rel="canonical" href="http://0.0.0.0:4000/" />
+<meta property="og:url" content="http://0.0.0.0:4000/" />
+<meta property="og:site_name" content="FP-Study" />
+<script type="application/ld+json">
+{"url":"http://0.0.0.0:4000/","name":"FP-Study","headline":"FP-Study","description":"Functional Programming Study Group","@type":"WebSite","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
 
-  <link rel="stylesheet" href="/assets/vendor/fontawesome-free/css/all.min.css">
-
-  <link rel="stylesheet" href="/assets/main.css">
-  <link rel="canonical" href="http://0.0.0.0:4000/">
-  <link rel="alternate" type="application/rss+xml" title="FP-STUDY" href="/feed.xml">
-
+    <!-- Manual seo tags -->
+    <!--
+    <title> FP-Study</title>
+    <meta name="description" content="Functional Programming Study Group">
+    -->
 </head>
 
+  <body>
+    <header class="site-header">
 
-<body>
-
-  <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="/">FP-STUDY</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
-      <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/posts">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-
-  <!-- Page Header -->
-
-<header class="masthead" style="background-image: url('/img/bg-index.jpg')">
-  
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading">
-            <h1>FP-STUDY</h1>
-            
-            <span class="subheading">Functional Programming Study on Haskell</span>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/fp-study.png" />
+		</a>
         
 
-        <!-- Home Post List -->
+		<h1 class="site-title">
+			<a aria-label="FP-Study" href="/">
+        FP-Study
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
         
 
-        <article class="post-preview">
-          <a href="/2019/12/26/hellohaskell.html">
-            <h2 class="post-title">Hello, Haskell!</h2>
-            
-            <h3 class="post-subtitle">We start Haskell-Blog!</h3>
-            
-          </a>
-          <p class="post-meta">Posted by
-            
-            devJRL
-            
-            on
-            December 26, 2019 &middot; <span class="reading-time" title="Estimated read time">
-  
-   1 min  read </span>
-            
-          </p>
-        </article>
-
-        <hr>
-
         
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="SOLVED" title="SOLVED" href="/solved/">
+                     SOLVED 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+    </ul>
 
-        <!-- Pager -->
-        <div class="clearfix">
-          <a class="btn btn-primary float-right" href="/posts">View All Posts &rarr;</a>
-        </div>
+	</nav>
+</header>
 
-      </div>
-    </div>
+    <div class="content">
+      <div class="home">
+
+  <div id="main" class="call-out"
+       style="background-image: url('/assets/img/pexels/computer.jpeg')">
+    <h1> How wonderful way of functional thinking! </h1>
   </div>
 
+  <div class="posts">
+    
+    <div class="post-teaser">
+        
+        <span>
+          <header>
+            <h1>
+              <a aria-label="Hello, Haskell!" class="post-link" href="/2019/10/26/Hello-Haskell.html">
+                Hello, Haskell!
+              </a>
+            </h1>
+            
 
-  <!-- Footer -->
 
-<hr>
+<div class="post-info">
+    <p class="meta">
+      October 26, 2019
+    </p></div>
 
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <ul class="list-inline text-center">
+          </header>
           
-          <li class="list-inline-item">
-            <a href="mailto:fp-study@gmail.com">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="far fa-envelope fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
+              <div class="excerpt">
+                  
+                     On today, We discussed writting down various method of haskell algorithm about many questions.
+
+
+                  
+              </div>
           
-          
-          
-          
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/leechanwoo">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          
-          
-          <li class="list-inline-item">
-            <a href="https://github.com/fp-study">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-          
-        </ul>
-        <p class="copyright text-muted">Copyright &copy; devJRL 2019</p>
-      </div>
+      </span>
     </div>
-  </div>
+    
+</div>
+
+
+
+
+    
+</div>
+
+    </div>
+    <footer class="site-footer">
+    <p class="text">
+        FP-Study is operated by <a target="_blank" href="https://www.linkedin.com/in/leechanwoo/">Chanwoo</a> and <a target="_blank" href="https://www.linkedin.com/in/devjrl/">Jeongryeol</a> <br>Powered by <a targe="_blank" href="https://jekyllrb.com/">Jekyll</a> with <a target="_blank" href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="http://0.0.0.0:4000/" title="Follow RSS feed">
+    <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="mailto:dev2sponge@gmail.com" title="Email">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://github.com/devJRL" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a href="https://www.linkedin.com/in/devjrl" title="Follow on LinkedIn">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
 </footer>
 
 
-  <script src="/assets/vendor/jquery/jquery.min.js"></script>
-<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/vendor/startbootstrap-clean-blog/js/clean-blog.min.js"></script>
 
-<script src="/assets/scripts.js"></script>
-
-
-
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '');
-</script>
-
-
-
-</body>
-
+  </body>
 </html>

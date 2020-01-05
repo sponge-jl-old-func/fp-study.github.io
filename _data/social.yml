@@ -1,0 +1,36 @@
+# Icons on the footer
+rss: true         # Make sure you created a feed.xml with feed.xml layout
+email_address: "dev2sponge@gmail.com"   # Full email address, e.g. "sam@example.com"
+behance:
+bitbucket:
+dribbble:
+facebook:
+flickr:
+gitlab:
+github: "devJRL"
+instagram:
+keybase:
+linkedin: "https://www.linkedin.com/in/devjrl"         # Full URL
+pinterest:
+reddit:
+soundcloud:
+stack_overflow:
+stack_exchange:   # Full URL
+steam:
+tumblr:
+twitter:          # "twitter username"
+vimeo:
+wordpress:
+youtube:
+
+# Share button options
+share:
+  facebook: true
+  twitter: true
+  tumblr: true
+  pinterest: true
+  pocket:
+  reddit:
+  linkedin: true
+  wordpress:
+  email: true

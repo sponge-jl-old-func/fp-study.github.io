@@ -1,32 +1,54 @@
-title:              FP-STUDY
-email:              fp-study@gmail.com
-description:        Functional Programming Study on Haskell
-author:             devJRL
-baseurl:            
-url:                "https://fp-study.github.io"
+# SITE CONFIGURATION
+baseurl: "/"
+url: "https://fp-study.github.io"
 
-# Social Profiles
-twitter_username:   
-github_username:    fp-study
-facebook_username:  
-linkedin_username:  leechanwoo
+# THEME-SPECIFIC CONFIGURATION
+title: FP-Study                                         # site's title
+description: "Functional Programming Study Group"       # used by search engines
+avatar: assets/img/fp-study.png                         # Empty for no avatar in navbar
+favicon: assets/favicon.ico                             # Icon displayed in the tab
 
-# Add your google-analytics ID here to activate google analytics
-google_analytics:    # out your google-analytics code
+# Header and footer text
+header_text: How wonderful way of functional thinking!         # Change Blog header text
+header_feature_image: assets/img/pexels/computer.jpeg
+footer_text: >
+  FP-Study is operated by <a target="_blank" href="https://www.linkedin.com/in/leechanwoo/">Chanwoo</a> and <a target="_blank" href="https://www.linkedin.com/in/devjrl/">Jeongryeol</a>
+  <br>Powered by <a targe="_blank" href="https://jekyllrb.com/">Jekyll</a> with <a target="_blank" href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>
 
-# Build settings
-markdown:           kramdown
-paginate:           5
-paginate_path:      "/posts/page:num/"
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
-  - jekyll-gist
-  - jekyll-coffeescript
-  - jekyll-assets
+# Blog
+excerpt: true                                           # Or "truncate" (first 250 characters), "false" to disable
+post_navigation: true
+color_image: /assets/img/lineart.png                    # A bit transparent for color posts.
 
+# Features
+katex: true                                             # Enable if using math markup
+google_analytics:                                       # Tracking ID, e.g. "UA-000000-01"
+disqus_shortname:                                       # Your discus shortname for comments
+layout_variables:                                       # Open the "_sass > base" folder, and open "_variables.scss"
+footer_icons:                                           # In _data/social.yml
+share_buttons:                                          # In _data/social.yml
+authors:                                                # In _data/authors.yml
+language:                                               # In _data/language.yml
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+# PORTFOLIO
+collections:
+  solved:
+    output: true
+    permalink: /:collection/:name
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
 sass:
   sass_dir: _sass
-  style: compressed
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+exclude: [".jekyll-cache", "Gemfile", "Gemfile.lock", "type-on-strap.gemspec", "*.gem", ".idea", "vendor/*", "_haskell",
+          "LICENSE", "README.md", "screenshot.png", "assets/package.json", "assets/node_modules", "assets/gulpfile.js"]
 
+# theme: type-on-strap                                  # if using the theme as a jekyll theme gem
+remote_theme: sylhare/Type-on-Strap                     # If using as a remote_theme in github

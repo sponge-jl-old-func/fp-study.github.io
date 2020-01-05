@@ -1,26 +1,43 @@
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-  <div class="container">
-    <a class="navbar-brand" href="{{"/" | relative_url }}">{{ site.title | escape }}</a>
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
-      <i class="fa fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/" | relative_url }}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/about" | relative_url }}">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ "/posts" | relative_url }}">Posts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{"/contact" | relative_url }}">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        {% if site.avatar %}
+		<a href="{{ '/' | relative_url }}">
+			<img alt="logo img" class="avatar" src="{{ site.avatar | relative_url }}" />
+		</a>
+        {% endif %}
+
+		<h1 class="site-title">
+			<a aria-label="{{ site.title }}" href="{{ '/' | relative_url }}">
+        {{ site.title }}
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#">
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        {% assign name_page = "" %}
+
+        {% for page in site.pages %}
+            {% unless page.title == null or page.hide or name_page contains page.title %}
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
+                    {% if page.icon %} <i class="fa {{ page.icon }}" aria-hidden="true"></i>
+                    {% else %} {{ page.title }} {% endif%}
+                </a>
+            </li>
+            {% endunless %}
+            {% assign name_page = page.title | append: name_page %}
+        {% endfor %}
+    </ul>
+
+	</nav>
+</header>
