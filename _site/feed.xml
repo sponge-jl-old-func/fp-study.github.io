@@ -1,20 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-02-03T22:19:34+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">FP-Study</title><subtitle>Functional Programming Study Group</subtitle><entry><title type="html">JMB-06-04 Boggle Game</title><link href="http://0.0.0.0:4000/2020/01/04/JMB-06-04.html" rel="alternate" type="text/html" title="JMB-06-04 Boggle Game" /><published>2020-01-04T00:00:00+09:00</published><updated>2020-01-04T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2020/01/04/JMB-06-04</id><content type="html" xml:base="http://0.0.0.0:4000/2020/01/04/JMB-06-04.html">&lt;p&gt;&lt;strong&gt;Ch.06&lt;/strong&gt; Brute force :: &lt;strong&gt;BOGGLE GAME&lt;/strong&gt; &lt;!--more--&gt; &lt;a href=&quot;https://algospot.com/judge/problem/read/BOGGLE&quot;&gt;(click for detail)&lt;/a&gt;
-&lt;!--more--&gt; « &lt;a href=&quot;https://book.algospot.com/&quot;&gt;Algorithm Problem Solving Strategies&lt;/a&gt; book#1&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-02-04T00:12:12+09:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">FP-Study</title><subtitle>Functional Programming Study Group</subtitle><entry><title type="html">JMB-06-04 Boggle Game</title><link href="http://0.0.0.0:4000/2020/01/19/JMB-06-04.html" rel="alternate" type="text/html" title="JMB-06-04 Boggle Game" /><published>2020-01-19T00:00:00+09:00</published><updated>2020-01-19T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2020/01/19/JMB-06-04</id><content type="html" xml:base="http://0.0.0.0:4000/2020/01/19/JMB-06-04.html">&lt;p&gt;&lt;strong&gt;Ch.06&lt;/strong&gt; Brute force :: &lt;strong&gt;&lt;a href=&quot;https://algospot.com/judge/problem/read/BOGGLE&quot; target=&quot;\_blank&quot;&gt;BOGGLE GAME&lt;/a&gt;&lt;/strong&gt; &lt;!--more--&gt; ~ &lt;a href=&quot;https://book.algospot.com/&quot; target=&quot;\_blank&quot;&gt;Algorithm Problem Solving Strategies&lt;/a&gt; book#1&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;h3 id=&quot;solved&quot;&gt;Solved&lt;/h3&gt;
 
-&lt;p&gt;comment&lt;/p&gt;
-
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
-&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;comming&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soon&lt;/span&gt;
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;board&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;board&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;URLPM&quot;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;XPRET&quot;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;GIAET&quot;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;XTNZY&quot;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;XOQRS&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;hasWord&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;hasWord&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ws&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outOfRange&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;             &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;False&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;board&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;False&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;           &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;True&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; 
+      &lt;span class=&quot;n&quot;&gt;hasWord&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ws&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;True&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;otherwise&lt;/span&gt;                  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;False&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;outOfRange&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;outOfRange&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Bool&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;any&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;filter&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(,)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;$&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;*&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/fp-study/fp-study.github.io/blob/master/_haskell/2020-1-JongManBook/06-brute-force/&quot;&gt;Click to view haskell code&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;Here is the hints of search function!
+------------------------------------------
+flip :: (a -&amp;gt; b -&amp;gt; c) -&amp;gt; b -&amp;gt; a -&amp;gt; c
+any :: (a -&amp;gt; Bool) -&amp;gt; [a] -&amp;gt; Bool
+filter :: (a -&amp;gt; Bool) -&amp;gt; [a] -&amp;gt; [a]
+(&amp;lt;$&amp;gt;) :: Functor f =&amp;gt; (a-&amp;gt;b) -&amp;gt; f a -&amp;gt; f b
+(&amp;lt;*&amp;gt;) :: f (a -&amp;gt; b) -&amp;gt; f a -&amp;gt; f b
+------------------------------------------
+Remember! `[]` is Functor.
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><category term="solved" /><category term="ch06" /><summary type="html">Ch.06 Brute force :: BOGGLE GAME</summary></entry><entry><title type="html">JMB-06-01 sum [1..n]</title><link href="http://0.0.0.0:4000/2019/12/26/JMB-06-01.html" rel="alternate" type="text/html" title="JMB-06-01 sum [1..n]" /><published>2019-12-26T00:00:00+09:00</published><updated>2019-12-26T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2019/12/26/JMB-06-01</id><content type="html" xml:base="http://0.0.0.0:4000/2019/12/26/JMB-06-01.html">&lt;p&gt;&lt;strong&gt;Ch.06&lt;/strong&gt; Brute force :: &lt;strong&gt;Sum from 1 to n&lt;/strong&gt;
-&lt;!--more--&gt; « &lt;a href=&quot;https://book.algospot.com/&quot;&gt;Algorithm Problem Solving Strategies&lt;/a&gt; book#1&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fp-study/fp-study.github.io/blob/master/_haskell/2020-1-JongManBook/06-brute-force/06-04-Boggle-game.hs&quot; target=&quot;\_blank&quot;&gt;Click to view haskell code&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;</content><author><name></name></author><category term="solved" /><category term="ch06" /><summary type="html">Ch.06 Brute force :: BOGGLE GAME</summary></entry><entry><title type="html">JMB-06-01 sum [1..n]</title><link href="http://0.0.0.0:4000/2019/12/26/JMB-06-01.html" rel="alternate" type="text/html" title="JMB-06-01 sum [1..n]" /><published>2019-12-26T00:00:00+09:00</published><updated>2019-12-26T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2019/12/26/JMB-06-01</id><content type="html" xml:base="http://0.0.0.0:4000/2019/12/26/JMB-06-01.html">&lt;p&gt;`
+&lt;strong&gt;Ch.06&lt;/strong&gt; Brute force :: &lt;strong&gt;Sum from 1 to n&lt;/strong&gt; &lt;!--more--&gt; ~ &lt;a href=&quot;https://book.algospot.com/&quot; target=&quot;\_blank&quot;&gt;Algorithm Problem Solving Strategies&lt;/a&gt; book#1&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -36,19 +93,20 @@
 10
 &lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;otherwise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;otherwise&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;IO&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;()&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;-- if, n = 10&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;outputInt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;-- if, n = 10&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;outputInt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recursive&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; 
   &lt;span class=&quot;n&quot;&gt;putStrLn&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;show&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outputInt&lt;/span&gt;
 &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/fp-study/fp-study.github.io/blob/master/_haskell/2020-1-JongManBook/06-brute-force/06-01-sum-from-1-to-n_SOLVED.hs&quot;&gt;Click to view haskell code&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fp-study/fp-study.github.io/blob/master/_haskell/2020-1-JongManBook/06-brute-force/06-01-Sum-from-1-to-n.hs&quot; target=&quot;\_blank&quot;&gt;Click to view haskell code&lt;/a&gt;&lt;/p&gt;
 
-&lt;hr /&gt;</content><author><name></name></author><category term="solved" /><category term="ch06" /><summary type="html">Ch.06 Brute force :: Sum from 1 to n</summary></entry><entry><title type="html">Hello, Haskell!</title><link href="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html" rel="alternate" type="text/html" title="Hello, Haskell!" /><published>2019-10-26T00:00:00+09:00</published><updated>2019-10-26T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2019/10/26/Hello-Haskell</id><content type="html" xml:base="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html">&lt;p&gt;On today, We discussed writting down various method of haskell algorithm about many questions.&lt;/p&gt;
+&lt;hr /&gt;</content><author><name></name></author><category term="solved" /><category term="ch06" /><summary type="html">` Ch.06 Brute force :: Sum from 1 to n</summary></entry><entry><title type="html">Hello, Haskell!</title><link href="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html" rel="alternate" type="text/html" title="Hello, Haskell!" /><published>2019-10-26T00:00:00+09:00</published><updated>2019-10-26T00:00:00+09:00</updated><id>http://0.0.0.0:4000/2019/10/26/Hello-Haskell</id><content type="html" xml:base="http://0.0.0.0:4000/2019/10/26/Hello-Haskell.html">&lt;p&gt;On today, We discussed writting down various method of haskell algorithm about many questions.&lt;/p&gt;
 
 &lt;!--more--&gt;
-&lt;p&gt;Thanks for ‘&lt;a href=&quot;http://theyearlyprophet.com/&quot;&gt;Jongman Goo&lt;/a&gt;’ allowing to use question resources from &lt;a href=&quot;https://book.algospot.com/&quot;&gt;Algorithm Programming&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Notice" /><summary type="html">On today, We discussed writting down various method of haskell algorithm about many questions.</summary></entry></feed>
+
+&lt;p&gt;Thanks for ‘&lt;a href=&quot;http://theyearlyprophet.com/&quot;&gt;Jongman Goo&lt;/a&gt;’ allowing to use question resources from &lt;a href=&quot;https://book.algospot.com/&quot; target=&quot;\_blank&quot;&gt;Algorithm Programming&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Notice" /><summary type="html">On today, We discussed writting down various method of haskell algorithm about many questions.</summary></entry></feed>
